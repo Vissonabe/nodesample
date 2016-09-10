@@ -9,6 +9,9 @@ var port     = process.env.PORT || 8080;
 //app.use(connect.urlencoded());  
 // Routes  
 
+app.set('views', __dirname + '/views');
+  app.engine('html', require('ejs').renderFile);
+  
 require('./routes/routes.js')(app);  
 
 //app.set('views', __dirname + '/views');
