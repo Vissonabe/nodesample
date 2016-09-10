@@ -17,6 +17,7 @@ app.set('views', __dirname + '/views');
 //require('./routes/routes.js')(app);  
 
 app.use('/', routes);
+app.use('/contact',contact);
 
 //app.set('views', __dirname + '/views');
 //  app.engine('html', require('ejs').renderFile);
