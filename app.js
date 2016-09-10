@@ -3,16 +3,20 @@ var connect = require('connect');
 var app      = express(); 
 var port     = process.env.PORT || 8080;  
 // Configuration 
-//app.use(express.static(__dirname + '/public')); 
-//app.use(connect.logger('dev')); 
-//app.use(connect.json()); 
-//app.use(connect.urlencoded());  
+app.use(express.static(__dirname + '/public')); 
+app.use(connect.logger('dev')); 
+app.use(connect.json()); 
+app.use(connect.urlencoded());  
 // Routes  
+
+var routes = require('./routes/index');
 
 app.set('views', __dirname + '/views');
   app.engine('html', require('ejs').renderFile);
   
-require('./routes/routes.js')(app);  
+//require('./routes/routes.js')(app);  
+
+app.use('/', routes);
 
 //app.set('views', __dirname + '/views');
 //  app.engine('html', require('ejs').renderFile);
