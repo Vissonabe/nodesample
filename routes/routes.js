@@ -1,11 +1,12 @@
 var mail = require('config/sendmail');
 module.exports = function(app) {        
 
-
-     app.get('/', function(req, res) {
-          res.end("Node- sdfdsaf-Android-Project");    
-     });   
-
+app.set('views', __dirname + '/views');
+  app.engine('html', require('ejs').renderFile);
+  app.get('/', function(req, res) {
+    res.render('index.html');
+  });
+   
 app.get('/test', function(req, res) {  
           res.end("test tNode-Android-Project");    
      }); 
