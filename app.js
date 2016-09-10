@@ -10,6 +10,7 @@ app.use(connect.urlencoded());
 // Routes  
 
 var routes = require('./routes/index');
+var contact = require('./routes/contact');
 
 app.set('views', __dirname + '/views');
   app.engine('html', require('ejs').renderFile);
