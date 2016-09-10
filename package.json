@@ -11,5 +11,7 @@
     "crypto": "~0.0.3",
     "gravatar": "~1.0.6",
     "mongodb": "^2.2.9"
+    "zombie": "*",
+    "ejs": "*"
   }
 }
